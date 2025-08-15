@@ -1,0 +1,11 @@
+.landing {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+  }
+  

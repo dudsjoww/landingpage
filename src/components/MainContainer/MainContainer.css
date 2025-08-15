@@ -1,0 +1,65 @@
+.timeline-section {
+    background: #ddd;
+    padding: 3rem 0;
+  }
+  
+  .timeline-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: black;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 2px); /* alinhado exatamente com a linha */
+    width: 14px;
+    height: 14px;
+    background: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .timeline-content {
+    background: transparent;
+    padding: 0.5rem 1rem;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .timeline-content p {
+    margin: 0.2rem 0 0;
+    white-space: pre-line;
+  }
+  
