@@ -11,20 +11,8 @@ export default function MainContainer() {
 
   return (
     <section id="timeline" className="timeline-section">
-      <div className="timeline-container">
-        <div className="timeline-line">
+      <div className="timeline">
 
-            
-        </div>
-        {items.map((item, index) => (
-          <div className={`timeline-item ${item.side}`} key={index}>
-            <div className="timeline-dot"></div>
-            <div className="timeline-content">
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
