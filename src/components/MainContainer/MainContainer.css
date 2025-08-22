@@ -1,5 +1,61 @@
-.timeline{
-  margin: 0 auto;
-  max-width: 750px;
-  padding: 25px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 55%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: #1c4f86;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+  right: -7%;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -10%;
 }

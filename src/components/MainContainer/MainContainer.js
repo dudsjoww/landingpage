@@ -10,10 +10,11 @@ export default function MainContainer() {
   ];
 
   return (
-    <section id="timeline" className="timeline-section">
-      <div className="timeline">
-
-      </div>
-    </section>
-  );
+  <ul class="timeline">
+    <li class="timeline-item">Event 1</li>
+    <li class="timeline-item">Event 2</li>
+    <li class="timeline-item">Event 3</li>
+    <li class="timeline-item">Event 4</li>
+  </ul>
+  )
 }
