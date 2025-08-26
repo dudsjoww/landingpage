@@ -10,11 +10,15 @@ export default function MainContainer() {
   ];
 
   return (
-  <ul class="timeline">
-    <li class="timeline-item">Event 1</li>
-    <li class="timeline-item">Event 2</li>
-    <li class="timeline-item">Event 3</li>
-    <li class="timeline-item">Event 4</li>
-  </ul>
+  <div className="Container" id="timeline">
+    <ul class="timeline">
+      {items.map((element,index) =>(
+        <li key={index} className="timeline-item">
+          <h1>{element.title}</h1>
+          <p>{element.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
   )
 }
