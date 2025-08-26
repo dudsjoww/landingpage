@@ -55,6 +55,7 @@
   top: -5%;
   left: 111.5%;       /* borda direita do card */
 }
+
 .timeline-item:nth-child(odd)::before {
   left: 111.5%;      /* borda direita do card */
   transform: translateX(-60%);
