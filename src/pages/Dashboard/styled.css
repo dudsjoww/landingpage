@@ -1,0 +1,69 @@
+.dashboard-container {
+  display: flexbox;
+  background: #000000;
+  color: white;
+  padding: 0px;
+  height: 100vh;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-button {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.plus {
+  color: green;
+  margin-left: 6px;
+}
+
+.cards-grid {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10vh;
+}
+
+.card {
+  background: #eee;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 2vh;
+  max-width: 40vh;
+  min-width: 30vh;
+  min-height: 30vh;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  border: none;
+  background: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.card-info {
+  margin-top: 10px;
+  padding-left: 15px;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./LoginPage.css";
+import "./styled.css";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -10,7 +10,7 @@ export default function LoginPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Aqui você faria a validação/autenticação
-    if (email === "teste@teste.com" && senha === "1234") {
+    if (email === "teste" && senha === "123") {
       navigate("/dashboard"); // redireciona
     } else {
       alert("Credenciais inválidas");
@@ -19,24 +19,30 @@ export default function LoginPage() {
 
   return (
     <div className="login-container">
-      <form onSubmit={handleSubmit} className=".login-form">
-        <h2 className=".login-title">Login</h2>
+      <form onSubmit={handleSubmit} className="login-form">
+        <h2 className="login-title">Login</h2>
         <input
-          type="email"
-          placeholder="Email"
-          className=".login-input"
+          type="Text"
+          placeholder="teste"
+          className="login-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Senha"
-          className=".login-input"
+          placeholder="123"
+          className="login-input"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
-        <button type="submit" className=".login-button">
+        <button type="submit" className="login-button">
           Entrar
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate("/register")}
+          className="register-button">
+          Registrar-se
         </button>
       </form>
     </div>
