@@ -54,15 +54,18 @@ export default function Curriculum() {
 
       <div className="cards-flex">
         {infoCard.map((element, index) => (
-          <div key={element.id} className="card">
+          <Link key={element.id} to={`/dashboard/curriculum/${element.id}`} className="card-link">
+            <div className="card">
               <div className="card-header">
-              <Link key={element.id} to={`/dashboard/curriculum/${element.id}`}>
                 <h3>{element.title}</h3>
-                </Link>
                 <button
                   className="delete-btn"
-                  onClick={() => removeCard(element.id)}
-                  >
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    removeCard(element.id);
+                  }}
+                >
                   X
                 </button>
               </div>
@@ -73,6 +76,7 @@ export default function Curriculum() {
                 ))}
               </ul>
             </div>
+          </Link>
         ))}
       </div>
     </div>
