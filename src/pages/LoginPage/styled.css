@@ -2,8 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100vh;
-    background: #f4f4f4;
+    background: url("../../assets/loginBackground.jpg") no-repeat center center;
+    background-size: cover;
+    
   }
   
   .login-form {
@@ -56,4 +59,3 @@
   .login-button:hover {
     background: #163b66;
   }
-  

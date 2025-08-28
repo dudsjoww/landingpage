@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./styled.css";
 
 
@@ -24,7 +25,7 @@ export default function Curriculum() {
     }
   ]);
 
-  // remover card
+  // remove o card/ Só filtra ele para não "vermos"
   const removeCard = (id) => {
     setInfoCard(infoCard.filter((c) => c.id !== id));
   };
@@ -51,25 +52,27 @@ export default function Curriculum() {
         Criar <span className="plus">+</span>
       </button>
 
-      <div className="cards-grid">
+      <div className="cards-flex">
         {infoCard.map((element, index) => (
           <div key={element.id} className="card">
-            <div className="card-header">
-              <h3>{element.title}</h3>
-              <button
-                className="delete-btn"
-                onClick={() => removeCard(element.id)}
-              >
-                X
-              </button>
+              <div className="card-header">
+              <Link key={element.id} to={`/dashboard/curriculum/${element.id}`}>
+                <h3>{element.title}</h3>
+                </Link>
+                <button
+                  className="delete-btn"
+                  onClick={() => removeCard(element.id)}
+                  >
+                  X
+                </button>
+              </div>
+              <p className="card-date">Data de Criação: {element.timestampCreation}</p>
+              <ul className="card-info">
+                {element.info.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
             </div>
-            <p className="card-date">{element.timestampCreation}</p>
-            <ul className="card-info">
-              {element.info.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </div>
         ))}
       </div>
     </div>

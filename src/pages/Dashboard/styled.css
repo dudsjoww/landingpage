@@ -1,9 +1,10 @@
 .dashboard-container {
   display: flexbox;
-  background: #000000;
+  background: #141414;
   color: white;
   padding: 0px;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
 }
 
 .dashboard-title {
@@ -27,7 +28,7 @@
   margin-left: 6px;
 }
 
-.cards-grid {
+.cards-flex {
   display: flex;
   flex-flow: row wrap;
   gap: 10vh;
